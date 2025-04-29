@@ -30,6 +30,10 @@ Es una biblioteca relativamente pequeña y simple, con una implementación en al
 *Versatilidad:*
 Puede ser utilizada tanto en entornos de navegador como en entornos Node.js. 
 
+## Objetivo del proyecto:
+
+Este proyecto está diseñado para estudiantes de maestría que buscan aprender y aplicar pruebas VRT automatizadas en proyectos reales usando Pixelmatch, este mismo consiste en comparar dos imagenes generadas por playwright en versiones distintas de la ABP.
+
 ## Requisitos Básicos
 
 - Node.js (versión 20 o superior). Recomendamos utilizar la versión `lts/iron`.
@@ -45,9 +49,22 @@ npm install
 
 ## Configuracion
 
+Para *Playwright* si no lo tiene instalado:
+
 ```bash
 npm install -–save-dev pixelmatch
 
+```
+ en el archivo `vrt.config.js` se encuentra la configuracion para la comparacion de imagenes
+
+ ```bash
+ export const options = {
+  threshold: 0.1,
+  includeAA: true,
+  alpha: 0.1,
+  aaColor: [255, 0, 0],
+  diffColor: [255, 0, 255]
+}
 ```
 
 
