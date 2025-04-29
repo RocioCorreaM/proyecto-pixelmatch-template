@@ -1,7 +1,7 @@
 
 # Proyecto Base: Pruebas Visual Regression Testing (VRT) con Pixelmatch
 
-[PixelMatch] (https://github.com/mapbox/pixelmatch/blob/main/README.md.) es una biblioteca de JavaScript para la comparación de imágenes a nivel de píxel, especialmente diseñada para detectar diferencias entre imágenes, por ejemplo, en pruebas de regresión. Es rápida y eficiente, trabajando con arrays de datos de imágenes y no dependiente de otras bibliotecas. 
+[PixelMatch](https://github.com/mapbox/pixelmatch/blob/main/README.md) es una biblioteca de JavaScript para la comparación de imágenes a nivel de píxel, especialmente diseñada para detectar diferencias entre imágenes, por ejemplo, en pruebas de regresión. Es rápida y eficiente, trabajando con arrays de datos de imágenes y no dependiente de otras bibliotecas. 
 
 ## Caracteristicas Principles:
 *Comparación de imágenes:*
