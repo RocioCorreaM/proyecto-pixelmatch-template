@@ -1,7 +1,34 @@
 
-# proyecto-pixelmatch-template
+# Proyecto Base: Pruebas Visual Regression Testing (VRT) con Pixelmatch
 
+- `PixelMarch`: URL base para las pruebas: `https://github.com/mapbox/pixelmatch/blob/main/README.md` es una biblioteca de JavaScript para la comparación de imágenes a nivel de píxel, especialmente diseñada para detectar diferencias entre imágenes, por ejemplo, en pruebas de regresión. Es rápida y eficiente, trabajando con arrays de datos de imágenes y no dependiente de otras bibliotecas. 
 
+## Caracteristicas Principles:
+Comparación de imágenes:
+Permite comparar dos imágenes y determinar si hay diferencias entre ellas. 
+
+A nivel de píxel:
+Analiza cada píxel individualmente para detectar diferencias. 
+
+Para pruebas:
+Ideal para comparar imágenes en pruebas de regresión, donde se busca detectar cambios no deseados. 
+
+Rápida y eficiente:
+Diseñada para ser rápida y no depender de otras bibliotecas, lo que la hace adecuada para pruebas automatizadas. 
+
+## Detalles adicionales:
+
+Funciones de comparación:
+Incluye funciones para comparar imágenes basadas en la percepción del color (métricas de color perceptual) y para detectar píxeles antialiased. 
+
+Uso en pruebas automatizadas:
+Es común encontrarla en pruebas de integración continua, donde se comparan capturas de pantalla para asegurar que no haya cambios inesperados. 
+
+Implementación:
+Es una biblioteca relativamente pequeña y simple, con una implementación en alrededor de 120 líneas de código. 
+
+Versatilidad:
+Puede ser utilizada tanto en entornos de navegador como en entornos Node.js. 
 
 ## Requisitos Básicos
 
@@ -16,8 +43,12 @@ Instala las dependencias necesarias utilizando npm:
 npm install
 ```
 
-Instalar confoguracion de playwright
+## Configuracion
 
+```bash
+npm install -–save-dev pixelmatch
+
+```
 
 
 ## Ejecución de Pruebas VRT
@@ -35,15 +66,3 @@ Puedes ejecutar las pruebas en modo headless para Chrome, Firefox y Electron
     ```bash
     npx playwright show-report
     ```
-
-## Configuración
-
-### Configuración de Playwright
-
-El archivo `jest.config.js` incluye la configuración básica para Jest con Puppeteer:
-
-- **Preset**: Se utiliza `jest-puppeteer` como framework base.
-- **Archivos de configuración adicionales**: Se incluye `expect-puppeteer` para extender las funcionalidades de las pruebas.
-- **Variables globales**: Puedes agregar y modificar las variables globales de acuerdo a las necesidades de tus pruebas. Variables predefinidas:
-    - `baseUrl`: URL base para las pruebas: `https://angular-6-registration-login-example.stackblitz.io`.
-    - `screenshotPath`: Ruta para guardar capturas de pantalla: `./test-results`.
